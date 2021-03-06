@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+nav {
+  width: 100%;
+  background-color: orange;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  color: white;
+}
+h1 {
+  font-size: 25px;
+  font-family: "Roboto", sans-serif;
+}
+ul {
+  display: flex;
+  list-style-type: none;
+}
+nav li {
+  padding: 5px;
+}
+nav a {
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+#btn {
+  display: none;
+}
+
+@media (min-width: 200px) and (max-width: 500px) {
+  ul {
+    /* the ul i.e the nav items are hidden when the screen is small      */
+    display: none;
+  }
+  #btn {
+    /* the previous hidden btn is now shown on a small screen      */
+    display: block;
+    padding: 5px;
+    font-size: 16px;
+    background: black;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 20%;
+    margin-right: 20px;
+  }
+
+  /* Here on the styles below, I added a class of .mobile-menu styled for a small screen and targeted at the navItems. The style is made functional with js */
+
+  .nav-list.mobile-menu {
+    display: block;
+    width: 100%;
+    background: black;
+    position: absolute;
+    top: 70px;
+    right: 0;
+  }
+  .nav-list.mobile-menu li {
+    display: block;
+    background: green;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+  }
+  .nav-list.mobile-menu a {
+    padding-right: 3rem;
+  }
+}
